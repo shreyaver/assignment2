@@ -1,0 +1,28 @@
+{
+  "name": "assignment2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrationDown": "./node_modules/.bin/sequelize db:migrate:undo:all",
+    "migrationUp": "./node_modules/.bin/sequelize db:migrate",
+    "test": "NODE_ENV=test npm run migrationDown && NODE_ENV=test npm run migrationUp && jest"
+  },
+  "author": "Shreya Verma",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "hapi": "^17.8.0",
+    "jest": "^24.0.0",
+    "joi": "^14.3.1",
+    "pg": "^7.8.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
+  }
+}
